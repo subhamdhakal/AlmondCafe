@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import com.example.almondcafe.fragment.Past
+import com.example.almondcafe.fragment.Summary
 import com.example.almondcafe.fragment.Today
 
 class DashBoardPagerAdapter(manager: FragmentManager, context: Context) : FragmentPagerAdapter(manager) {

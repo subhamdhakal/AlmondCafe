@@ -4,7 +4,7 @@ import android.app.Activity
 import android.support.multidex.MultiDexApplication
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatDelegate
-//import com.example.almondcafe.di.DaggerAppComponent
+import com.example.almondcafe.di.DaggerAppComponent
 import com.facebook.stetho.Stetho
 import com.squareup.leakcanary.LeakCanary
 import dagger.android.AndroidInjector

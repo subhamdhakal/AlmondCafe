@@ -18,20 +18,17 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class Today : Fragment(){
+class Today : BaseFragment<FragmentTodayBinding>() {
+    override fun getLayout(): Int {
+        return R.layout.fragment_today
+    }
 
+    override fun isDataBindingEnabled(): Boolean {
+        return true
+    }
     @Inject
     lateinit var mainActivityVM:MainActivityVM
 
-
-//    override fun getLayout(): Int {
-//        return R.layout.fragment_today
-//    }
-//
-//    override fun isDataBindingEnabled(): Boolean {
-//        super.isDataBindingEnabled()
-//        return true
-//    }
 
     companion object {
         fun newInstance(): Today {
@@ -42,5 +39,10 @@ class Today : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
 }
