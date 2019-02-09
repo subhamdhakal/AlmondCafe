@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name = "colorPrimary">#008577</color>
-    <color name = "colorPrimaryDark">#00574B</color>
-    <color name = "colorAccent">#D81B60</color>
+    <color name = "colorPrimary">#2980b9</color>
+    <color name = "colorPrimaryDark">#2980b9</color>
+    <color name = "colorAccent">#3498db</color>
+    <color name = "separater">#dfe4ea</color>
+    <color name = "city_lights">#dfe6e9</color>
+    <color name = "dirty_brown">#5D5054</color>
+    <color name = "fiery_fuchsia">#B33771</color>
+    <color name = "white">#FFFFFF</color>
+    <color name="warm_grey">#80979797</color>
+
 </resources>
+
+

@@ -29,23 +29,23 @@ class AppModule {
 ////        return ApiServiceProvider(appPreferences)
 ////    }
 //
-//    @Provides
-//    @Singleton
-//    fun provideDatabase(application: Application): AlmondCafeDatabase {
-//        val database: AlmondCafeDatabase = Room
-//            .databaseBuilder(
-//                application.applicationContext,
-//                AlmondCafeDatabase::class.java, "almond_database"
-//            )
-//            .allowMainThreadQueries()
-//            .fallbackToDestructiveMigration()
-//            .build()
-//        return database
-//    }
-//
-//    @Provides
-//    @Singleton
-//    fun provideDayDao(database: AlmondCafeDatabase) = database.itemDao
+    @Provides
+    @Singleton
+    fun provideDatabase(application: Application): AlmondCafeDatabase {
+        val database: AlmondCafeDatabase = Room
+            .databaseBuilder(
+                application.applicationContext,
+                AlmondCafeDatabase::class.java, "almond_database"
+            )
+            .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
+        return database
+    }
+
+    @Provides
+    @Singleton
+    fun provideItemDao(database: AlmondCafeDatabase) = database.itemDao
 //
 //    @Provides
 //    @Singleton

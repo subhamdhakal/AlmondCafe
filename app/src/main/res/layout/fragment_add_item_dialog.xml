@@ -1,0 +1,121 @@
+<layout xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
+        tools:context = "com.example.almondcafe.ui.activity.dialogfragment.AddItemDialogFragment">
+    <data>
+        <variable
+            name = "viewModel"
+            type = "com.example.almondcafe.ui.activity.viewmodel.AddItemDialogFragmentViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        >
+
+        <EditText
+            android:id = "@+id/edit_text_item_name"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:hint = "Enter item name"
+            android:text = "@{viewModel.itemName}"
+            android:paddingLeft = "8dp"
+            android:background = "@drawable/edit_text_field_selector"
+            app:layout_constraintStart_toStartOf = "parent"
+            android:layout_marginLeft = "24dp"
+            android:layout_marginStart = "24dp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            android:layout_marginEnd = "24dp"
+            android:layout_marginRight = "24dp"
+            app:layout_constraintHorizontal_bias = "0.0"
+            android:layout_marginTop = "16dp"
+            app:layout_constraintTop_toBottomOf = "@+id/image_view_delete" />
+
+        <EditText
+            android:id = "@+id/edit_text_item_price"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:hint = "Enter item price"
+            android:paddingLeft = "8dp"
+            android:inputType="number"
+            android:text="@{viewModel.itemPrice}"
+            android:background = "@drawable/edit_text_field_selector"
+            android:layout_marginTop = "24dp"
+            app:layout_constraintTop_toBottomOf = "@+id/edit_text_item_name"
+            app:layout_constraintStart_toStartOf = "@+id/edit_text_item_name"
+            app:layout_constraintEnd_toEndOf = "@+id/edit_text_item_name"
+            android:layout_marginLeft = "24dp"
+            android:layout_marginStart = "24dp"
+            android:layout_marginEnd = "24dp"
+            android:layout_marginRight = "24dp" />
+
+        <EditText
+            android:id = "@+id/edit_text_item_quantity"
+            android:layout_width = "match_parent"
+            android:layout_height = "48dp"
+            android:hint = "Enter item quantity"
+            android:paddingLeft = "8dp"
+            android:inputType="number"
+            android:text="@{viewModel.itemQuantity}"
+            android:background = "@drawable/edit_text_field_selector"
+            android:layout_marginTop = "24dp"
+            app:layout_constraintTop_toBottomOf = "@+id/edit_text_item_price"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintEnd_toEndOf = "@+id/edit_text_item_price"
+            android:layout_marginEnd = "24dp"
+            android:layout_marginRight = "24dp"
+            android:layout_marginLeft = "24dp"
+            android:layout_marginStart = "24dp" />
+
+        <Button
+            android:id = "@+id/button_add"
+            android:text = "@{viewModel.buttonText}"
+            android:background = "@drawable/bg_rounded_rectangular_color_accent"
+            android:textAllCaps = "false"
+            android:textColor = "@color/white"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "8dp"
+            app:layout_constraintTop_toBottomOf = "@+id/spinner_category"
+            android:layout_marginBottom = "24dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            android:layout_marginEnd = "8dp"
+            app:layout_constraintEnd_toEndOf = "@+id/spinner_category"
+            android:layout_marginRight = "8dp" />
+
+        <Button
+            android:id = "@+id/button_cancel_adding_item"
+            android:text = "Cancel"
+            android:textAllCaps = "false"
+            android:textColor = "@color/white"
+            android:background = "@drawable/bg_rounded_rectangular_color_accent"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            app:layout_constraintTop_toTopOf = "@+id/button_add"
+            android:layout_marginEnd = "32dp"
+            app:layout_constraintEnd_toStartOf = "@+id/button_add"
+            android:layout_marginRight = "32dp"
+            app:layout_constraintBottom_toBottomOf = "@+id/button_add" />
+
+        <Spinner
+            android:layout_width = "0dp"
+            android:layout_height = "48dp"
+            android:id = "@+id/spinner_category"
+            android:layout_marginTop = "32dp"
+            app:layout_constraintTop_toBottomOf = "@+id/edit_text_item_quantity"
+            app:layout_constraintStart_toStartOf = "@+id/edit_text_item_quantity"
+            app:layout_constraintEnd_toEndOf = "@+id/edit_text_item_quantity" />
+
+        <ImageView
+            app:srcCompat = "@drawable/ic_delete_24dp"
+            android:layout_width = "wrap_content"
+            android:layout_height = "22dp"
+            android:visibility="@{viewModel.deleteIconVisibility}"
+            android:id = "@+id/image_view_delete"
+            app:layout_constraintEnd_toEndOf = "@+id/edit_text_item_name"
+            android:layout_marginTop = "8dp"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

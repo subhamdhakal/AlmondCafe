@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.example.almondcafe.fragment.EditItems
 import com.example.almondcafe.fragment.Past
 import com.example.almondcafe.fragment.Summary
 import com.example.almondcafe.fragment.Today
@@ -16,6 +17,7 @@ class DashBoardPagerAdapter(manager: FragmentManager, context: Context) : Fragme
             0-> return Today.newInstance()
             1 -> return Past.newInstance()
             2-> return Summary.newInstance()
+            3-> return EditItems.newInstance()
 //            PAST_POSITION -> return PastFragment.newInstance()
 //            SUPPLIERS_POSITION -> return SuppliersFragment.newInstance()
         }
@@ -37,7 +39,7 @@ class DashBoardPagerAdapter(manager: FragmentManager, context: Context) : Fragme
     }
 
     override fun getCount(): Int {
-        return 3
+        return 4
     }
 
 

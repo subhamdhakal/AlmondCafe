@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android = "http://schemas.android.com/apk/res/android">
+<menu xmlns:app = "http://schemas.android.com/apk/res-auto"
+      xmlns:android = "http://schemas.android.com/apk/res/android">
 
     <item
         android:id = "@+id/navigation_home"
-        android:icon = "@drawable/ic_directions_bus_black_24dp"
-        android:title = "Notice" />
+        android:icon = "@drawable/ic_drawable_today"
+        android:title = "Today"
+        app:showAsAction = "withText" />
 
     <item
         android:id = "@+id/navigation_dashboard"
-        android:icon = "@drawable/ic_directions_bus_black_24dp"
-        android:title = "Bus" />
+        android:icon = "@drawable/ic_drawable_past"
+        android:title = "Past"
+        app:showAsAction = "withText" />
 
     <item
         android:id = "@+id/navigation_notifications"
-        android:icon = "@drawable/ic_directions_bus_black_24dp"
-        android:title = "Messages" />
+        android:icon = "@drawable/ic_description_black_24dp"
+        android:title = "Summary"
+        app:showAsAction = "withText" />
+
+    <item
+        android:id = "@+id/navigation_edit_items"
+        android:icon = "@drawable/ic_edit_item_black_24dp"
+        android:title = "Edit Items "
+        app:showAsAction = "withText" />
 
 </menu>
